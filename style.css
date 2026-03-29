@@ -582,3 +582,13 @@ footer {
 .final h2 {
   font-family: 'Playfair Display', serif;
 }
+
+.timeline a {
+	target: _blank;
+}
+
+.timeline a:hover {
+  font-weight: 600;       
+  color: var(--blue);      
+}
+
