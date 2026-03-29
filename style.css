@@ -295,7 +295,7 @@ footer {
   border-radius: 12px;
   overflow: hidden;
 }
-}
+
 .attraction.burgundy { background-color: var(--burgundy); color: #fdfcf9; }
 .attraction.green { background-color: var(--green); color: #fdfcf9; }
 .attraction.navy { background-color: var(--blue); color: #fdfcf9; }
