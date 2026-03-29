@@ -320,7 +320,7 @@ footer {
   border-bottom: 1px dashed #fdfcf9;
   border-right: 1px dashed #fdfcf9;
 }
-.attraction-image {
+.attraction-images {
 	width:100%;
   height:300px;
   object-fit: cover;
