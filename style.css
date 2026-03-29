@@ -321,13 +321,19 @@ footer {
   border-right: 1px dashed #fdfcf9;
 }
 .attraction-images {
-	width:100%;
-  height:300px;
-  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-
+.attraction-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
 .attraction img:hover {
   transform: scale(1.03);
 }
