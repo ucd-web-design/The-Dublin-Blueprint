@@ -190,6 +190,16 @@ body::before {
   align-items: stretch;
 }
 
+.features a:hover {
+  font-weight: 600;       
+  color: var(--blue);      
+}
+
+.map-link a:hover {
+  font-weight: 600;       
+  color: var(--blue);      
+}
+
 .card {
   background: white;
   padding: 25px;
