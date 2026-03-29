@@ -291,6 +291,10 @@ footer {
   gap: 40px;
   align-items: center;
 }
+.attraction.burgundy { background-color: var(--burgundy); color: #fdfcf9; }
+.attraction.green { background-color: var(--green); color: #fdfcf9; }
+.attraction.navy { background-color: var(--blue); color: #fdfcf9; }
+
 
 .attractions-highlight {
   background-color: var(--blue);
@@ -316,10 +320,9 @@ footer {
   border-bottom: 1px dashed #fdfcf9;
   border-right: 1px dashed #fdfcf9;
 }
-
-.attraction img {
-  width: 100%;
-  height: 300px;
+.attraction-images {
+	width:100%;
+  height:300px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -726,6 +729,7 @@ img {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
 }
 
 /* =========================
@@ -931,3 +935,5 @@ img {
         grid-template-columns: 1fr;
     }
 }
+=======
+>>>>>>> 0a3dce364c37fcd24e53bfaf18166bb15741868b
