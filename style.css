@@ -296,10 +296,9 @@ footer {
   overflow: hidden;
 }
 
-.attraction.burgundy { background-color: var(--burgundy); color: #fdfcf9; }
-.attraction.green { background-color: var(--green); color: #fdfcf9; }
-.attraction.navy { background-color: var(--blue); color: #fdfcf9; }
-
+.attraction.burgundy { border-top: 10px solid var(--burgundy);}
+.attraction.green { border-top: 10px solid var(--green);}
+.attraction.navy {  border-top: 10px solid var(--blue); }
 
 .attractions-highlight {
   background-color: var(--blue);
