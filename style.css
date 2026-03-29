@@ -354,7 +354,9 @@ footer {
   font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
 }
-
+.h2{ 
+	font-family: 'Playfair Display', serif;
+}
 /* HIDDEN GEMS */
 .hidden-gems {
   padding: 80px 60px;
