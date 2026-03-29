@@ -357,6 +357,38 @@ footer {
 .h2 { 
 	font-family: 'Playfair Display', serif;
 }
+.attractions-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0 40px 0;
+}
+
+.attractions-nav a {
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 6px;
+  color: var(--blue);
+}
+
+/* underline hover (matches navbar style) */
+.attractions-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--blue);
+  transition: width 0.3s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+.attractions-nav a:hover::after {
+  width: 100%;
+}
 /* HIDDEN GEMS */
 .hidden-gems {
   padding: 80px 60px;
