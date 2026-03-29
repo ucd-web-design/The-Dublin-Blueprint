@@ -729,7 +729,7 @@ img {
 /* MULTIPLE IMAGES */
 
 .attraction-images img {
-  position: relative;
+  width: 100px;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
