@@ -598,3 +598,106 @@ footer {
   color: var(--blue);      
 }
 
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+/* NAVBAR MOBILE */
+.navbar {
+  flex-direction: column;
+  align-items: center;   /* centers everything */
+  text-align: center;
+  gap: 10px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.nav-links {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+}
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  /* INTRO SPLIT → STACK */
+  .intro-split {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-text {
+    padding: 40px 20px;
+  }
+
+  .intro-visual img {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CARDS STACK */
+  .features {
+    flex-direction: column;
+  }
+
+  /* ATTRACTIONS */
+  .attraction {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cascade {
+    padding: 40px 20px;
+  }
+
+  .about-item {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding: 40px 20px;
+  }
+
+  .day {
+    margin-left: 40px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .stop::before {
+    left: -30px;
+  }
+
+  .stop.with-image {
+    grid-template-columns: 1fr;
+  }
+
+  /* FINAL TEXT */
+  .final {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+}
