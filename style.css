@@ -496,7 +496,7 @@ footer {
   position: absolute;
   left: 60px;
   top: 0;
-  bottom: -120px;
+  bottom: -200px;
   width: 2px;
   background-color: var(--blue);
 }
@@ -574,7 +574,9 @@ footer {
 /* FINAL SECTION */
 .final {
   margin-top: 80px;
+  margin: auto;
   text-align: center;
+  max-width: 1300px;
 }
 
 .final h2 {
