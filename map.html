@@ -1,1 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dublin Map</title>
 
+    <!-- Fonts + Your CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">The Dublin Blueprint</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-dublin.html">About Dublin</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="map.html" class="active">Map</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="plan.html">Plan Your Stay</a></li>
+            <li><a href="itinerary.html">Itinerary</a></li>
+            <li><a href="tips.html">Tips</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1>Explore Dublin</h1>
+        <p>Use the map and sidebar to explore key locations around the city.</p>
+    </div>
+
+    <!-- 3-COLUMN LAYOUT -->
+    <section class="map-page">
+
+    <!-- FILTER BAR ABOVE EVERYTHING -->
+    <div class="filter-bar">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="nightlife">Nightlife</button>
+        <button data-filter="family">Family</button>
+        <button data-filter="sightseeing">Sightseeing</button>
+        <button data-filter="museums">Museums</button>
+        <button data-filter="parks">Parks</button>
+        <button data-filter="beaches">Beaches</button>
+        <button data-filter="food">Food & Drink</button>
+    </div>
+
+    <!-- 3-COLUMN LAYOUT -->
+    <div class="map-layout">
+
+        <!-- LEFT: PARAGRAPH -->
+        <div class="map-info">
+            <h2>Discover Dublin</h2>
+            <p>
+                Here are some of the best tourist attractions arounnd, feel free to use the filters to find exactly what you are looking for! — 
+                nightlife, sightseeing, family activities, beaches, parks, museums, and more.
+            </p>
+            <p>
+                Click a location on the right to jump to it on the map, or click a marker 
+                to highlight it in the list.
+            </p>
+        </div>
+
+        <!-- MIDDLE: MAP -->
+        <div id="map"></div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="sidebar">
+            <h2>Locations</h2>
+
+            <!-- NIGHT LIFE -->
+            <div class="location-item" data-lat="53.3456" data-lng="-6.2649" data-category="nightlife">
+                <strong>Temple Bar</strong><br>Main tourist nightlife district.
+            </div>
+
+            <div class="location-item" data-lat="53.3397" data-lng="-6.2620" data-category="nightlife">
+                <strong>The Long Hall</strong><br>Oldies Pub loved by locals.
+            </div>
+
+            <div class="location-item" data-lat="53.3433" data-lng="-6.2631" data-category="nightlife">
+                <strong>Whelan’s</strong><br>Good live music.
+            </div>
+
+            <div class="location-item" data-lat="53.3450" data-lng="-6.2660" data-category="nightlife">
+                <strong>The Workman’s Club</strong><br>Indie bar & club.
+            </div>
+
+            <div class="location-item" data-lat="53.3439" data-lng="-6.2635" data-category="nightlife">
+                <strong>The Stag’s Head</strong><br>Classic Dublin pub.
+            </div>
+
+            <div class="location-item" data-lat="53.3470" data-lng="-6.2664" data-category="nightlife">
+                <strong>Bad Bobs</strong><br>Multi‑floor bar & rooftop.
+            </div>
+
+            <div class="location-item" data-lat="53.3430" data-lng="-6.2630" data-category="nightlife">
+                <strong>The George</strong><br>Dublin’s biggest LGBTQ+ club.
+            </div>
+
+            <div class="location-item" data-lat="53.3438" data-lng="-6.2644" data-category="nightlife">
+                <strong>Fitzsimons</strong><br>Rooftop bar & late‑night venue.
+            </div>
+
+            <div class="location-item" data-lat="53.3414" data-lng="-6.2622" data-category="nightlife">
+                <strong>O’Donoghue’s</strong><br>Traditional music pub.
+            </div>
+
+            <div class="location-item" data-lat="53.3435" data-lng="-6.2640" data-category="nightlife">
+                <strong>The Bernard Shaw</strong><br>Trendy bar & food yard.
+            </div>
+
+            <!-- FAMILY HOLIDAY -->
+             <div class="location-item" data-lat="53.3555" data-lng="-6.3043" data-category="family">
+                <strong>Dublin Zoo</strong><br>See lots of Animals!
+            </div>
+
+            <div class="location-item" data-lat="53.2722" data-lng="-6.2468" data-category="family">
+                <strong>Explorium</strong><br>Interactive science museum.
+            </div>
+
+            <div class="location-item" data-lat="53.2030" data-lng="-6.0984" data-category="family">
+                <strong>Bray Sea Life Aquarium</strong><br>Marine exhibits for kids.
+            </div>
+
+            <div class="location-item" data-lat="53.4508" data-lng="-6.1545" data-category="family">
+                <strong>Malahide Castle</strong><br>Fairy trail & gardens.
+            </div>
+
+            <div class="location-item" data-lat="53.4826" data-lng="-6.1819" data-category="family">
+                <strong>Newbridge Farm</strong><br>Animals & playground.
+            </div>
+
+            <div class="location-item" data-lat="53.2900" data-lng="-6.2290" data-category="family">
+                <strong>Airfield Estate</strong><br>Farm, gardens & cafe.
+            </div>
+
+            <div class="location-item" data-lat="53.3010" data-lng="-6.2230" data-category="family">
+                <strong>Imaginosity</strong><br>Children’s museum.
+            </div>
+
+            <div class="location-item" data-lat="53.3577" data-lng="-6.4481" data-category="family">
+                <strong>Fort Lucan</strong><br>Adventure park for kids.
+            </div>
+
+            <div class="location-item" data-lat="53.3410" data-lng="-6.2867" data-category="family">
+                <strong>Guinness Storehouse Gravity Bar</strong><br>Family friendly views.
+            </div>
+
+            <div class="location-item" data-lat="53.2937" data-lng="-6.1359" data-category="family">
+                <strong>Dún Laoghaire Pier</strong><br>Walks, ice cream & views.
+            </div>
+
+            <!-- SIGHTSEEING -->
+             <div class="location-item" data-lat="53.3430" data-lng="-6.2675" data-category="sightseeing">
+                <strong>Dublin Castle</strong><br>Historic Castle.
+            </div>
+
+            <div class="location-item" data-lat="53.3390" data-lng="-6.2603" data-category="sightseeing">
+                <strong>St. Stephen’s Green</strong><br>Iconic city park.
+            </div>
+
+            <div class="location-item" data-lat="53.3478" data-lng="-6.2597" data-category="sightseeing">
+                <strong>Ha’penny Bridge</strong><br>Famous pedestrian bridge.
+            </div>
+
+            <div class="location-item" data-lat="53.3438" data-lng="-6.2546" data-category="sightseeing">
+                <strong>Trinity College</strong><br>Oldest Library & features Book of Kells.
+            </div>
+
+            <div class="location-item" data-lat="53.3394" data-lng="-6.2711" data-category="sightseeing">
+                <strong>Christ Church Cathedral</strong><br>Medieval cathedral.
+            </div>
+
+            <div class="location-item" data-lat="53.3381" data-lng="-6.2716" data-category="sightseeing">
+                <strong>St. Patrick’s Cathedral</strong><br>Largest church in Ireland.
+            </div>
+
+            <div class="location-item" data-lat="53.3480" data-lng="-6.2590" data-category="sightseeing">
+                <strong>The Spire</strong><br>120m Pole.
+            </div>
+
+            <div class="location-item" data-lat="53.3479" data-lng="-6.2406" data-category="sightseeing">
+                <strong>Samuel Beckett Bridge</strong><br>Modern landmark.
+            </div>
+
+            <div class="location-item" data-lat="53.3463" data-lng="-6.2460" data-category="sightseeing">
+                <strong>Jeanie Johnston Famine Ship</strong><br>Replica famine ship.
+            </div>
+
+            <div class="location-item" data-lat="53.3460" data-lng="-6.1667" data-category="sightseeing">
+                <strong>Poolbeg Lighthouse</strong><br>Scenic pier walk.
+            </div>
+
+            <!--MUSEUMS + HISTORY-->
+            <div class="location-item" data-lat="53.34187" data-lng="-6.30980" data-category="museums">
+                <strong>Kilmainham Gaol</strong><br>Historic prison museum.
+            </div>
+
+            <div class="location-item" data-lat="53.3478" data-lng="-6.2453" data-category="museums">
+                <strong>EPIC Museum</strong><br>Irish emigration story.
+            </div>
+
+            <div class="location-item" data-lat="53.34022" data-lng="-6.25492" data-category="museums">
+                <strong>National Museum – Archaeology</strong><br>Bog bodies & artefacts.
+            </div>
+
+            <div class="location-item" data-lat="53.3408" data-lng="-6.2525" data-category="museums">
+                <strong>National Gallery of Ireland</strong><br>Irish & European art.
+            </div>
+
+            <div class="location-item" data-lat="53.34315" data-lng="-6.27206" data-category="museums">
+                <strong>Dublinia</strong><br>Viking & medieval Dublin.
+            </div>
+
+            <div class="location-item" data-lat="53.33964" data-lng="-6.25840" data-category="museums">
+                <strong>The Little Museum of Dublin</strong><br>20th‑century Dublin.
+            </div>
+
+            <div class="location-item" data-lat="53.3410" data-lng="-6.2600" data-category="museums">
+                <strong>Natural History Museum</strong><br>“Dead Zoo”.
+            </div>
+
+            <div class="location-item" data-lat="53.3430" data-lng="-6.2670" data-category="museums">
+                <strong>Chester Beatty Library</strong><br>Manuscripts & art.
+            </div>
+
+            <div class="location-item" data-lat="53.3470" data-lng="-6.2590" data-category="museums">
+                <strong>GPO Museum</strong><br>1916 Rising history.
+            </div>
+
+            <div class="location-item" data-lat="53.3430" data-lng="-6.2540" data-category="museums">
+                <strong>Science Gallery</strong><br>Interactive exhibitions.
+            </div>
+
+            <!-- PARKS + ADVENTURE -->
+             <div class="location-item" data-lat="53.3568" data-lng="-6.3290" data-category="parks">
+                <strong>Phoenix Park</strong><br>Deer & huge green space.
+            </div>
+
+            <div class="location-item" data-lat="53.3704" data-lng="-6.1765" data-category="parks">
+                <strong>St. Anne’s Park</strong><br>Playgrounds & rose garden.
+            </div>
+
+            <div class="location-item" data-lat="53.3382" data-lng="-6.2591" data-category="parks">
+                <strong>St. Stephen’s Green</strong><br>Historic city park.
+            </div>
+
+            <div class="location-item" data-lat="53.2590" data-lng="-6.1110" data-category="parks">
+                <strong>Killiney Hill Park</strong><br>Views over Dublin Bay.
+            </div>
+
+            <div class="location-item" data-lat="53.3240" data-lng="-6.2220" data-category="parks">
+                <strong>Herbert Park</strong><br>Pond & walking paths.
+            </div>
+
+            <div class="location-item" data-lat="53.2920" data-lng="-6.1340" data-category="parks">
+                <strong>People’s Park</strong><br>Sunday market.
+            </div>
+
+            <div class="location-item" data-lat="53.3470" data-lng="-6.2600" data-category="parks">
+                <strong>Merrion Square Park</strong><br>Oscar Wilde statue.
+            </div>
+
+            <div class="location-item" data-lat="53.3450" data-lng="-6.2700" data-category="parks">
+                <strong>Iveagh Gardens</strong><br>Hidden Victorian gardens.
+            </div>
+
+            <div class="location-item" data-lat="53.3600" data-lng="-6.3290" data-category="parks">
+                <strong>Áras an Uachtaráin Grounds</strong><br>Presidential residence.
+            </div>
+
+            <div class="location-item" data-lat="53.3500" data-lng="-6.2600" data-category="parks">
+                <strong>Garden of Remembrance</strong><br>Memorial garden.
+            </div>
+
+            <!-- BEACHES + SUN-DAY-->
+             <div class="location-item" data-lat="53.2562" data-lng="-6.1123" data-category="beaches">
+                <strong>Killiney Beach</strong><br>Scenic swimming spot.
+            </div>
+
+            <div class="location-item" data-lat="53.3850" data-lng="-6.1130" data-category="beaches">
+                <strong>Dollymount Strand</strong><br>Long sandy beach.
+            </div>
+
+            <div class="location-item" data-lat="53.3920" data-lng="-6.0650" data-category="beaches">
+                <strong>Howth Beach</strong><br>Near the harbour.
+            </div>
+
+            <div class="location-item" data-lat="53.2030" data-lng="-6.0980" data-category="beaches">
+                <strong>Bray Beach</strong><br>Promenade & views.
+            </div>
+
+            <div class="location-item" data-lat="53.3240" data-lng="-6.1060" data-category="beaches">
+                <strong>Seapoint</strong><br>Popular swimming spot.
+            </div>
+
+            <div class="location-item" data-lat="53.2930" data-lng="-6.1350" data-category="beaches">
+                <strong>Sandycove</strong><br>Forty Foot swimming area.
+            </div>
+
+            <div class="location-item" data-lat="53.3060" data-lng="-6.1350" data-category="beaches">
+                <strong>Dún Laoghaire East Pier</strong><br>Walks & ice cream.
+            </div>
+
+            <div class="location-item" data-lat="53.4500" data-lng="-6.1500" data-category="beaches">
+                <strong>Portmarnock Beach</strong><br>Velvet Strand.
+            </div>
+
+            <div class="location-item" data-lat="53.4800" data-lng="-6.1500" data-category="beaches">
+                <strong>Donabate Beach</strong><br>Wide sandy beach.
+            </div>
+
+            <div class="location-item" data-lat="53.5400" data-lng="-6.1000" data-category="beaches">
+                <strong>Skerries South Beach</strong><br>Family friendly.
+            </div>
+
+            <!-- FOOD + DINING EXPERIENCES -->
+             <div class="location-item" data-lat="53.3434" data-lng="-6.2631" data-category="food">
+                <strong>The Stag’s Head</strong><br>Classic Dublin pub.
+            </div>
+
+            <div class="location-item" data-lat="53.3410" data-lng="-6.2590" data-category="food">
+                <strong>Bewley’s Grafton Street</strong><br>Historic café.
+            </div>
+
+            <div class="location-item" data-lat="53.3430" data-lng="-6.2640" data-category="food">
+                <strong>Elephant & Castle</strong><br>Famous wings.
+            </div>
+
+            <div class="location-item" data-lat="53.3450" data-lng="-6.2660" data-category="food">
+                <strong>Queen of Tarts</strong><br>Pastries & desserts.
+            </div>
+
+            <div class="location-item" data-lat="53.3435" data-lng="-6.2600" data-category="food">
+                <strong>Avoca Suffolk Street</strong><br>Café & deli.
+            </div>
+
+            <div class="location-item" data-lat="53.3470" data-lng="-6.2600" data-category="food">
+                <strong>Brother Hubbard</strong><br>Brunch favourite.
+            </div>
+
+            <div class="location-item" data-lat="53.3390" data-lng="-6.2600" data-category="food">
+                <strong>Grogans</strong><br>Toasties & pints.
+            </div>
+
+            <div class="location-item" data-lat="53.3440" data-lng="-6.2640" data-category="food">
+                <strong>The Porterhouse</strong><br>Craft beer pub.
+            </div>
+
+            <div class="location-item" data-lat="53.3415" data-lng="-6.2605" data-category="food">
+                <strong>Keogh’s Café</strong><br>Best scones in Dublin.
+            </div>
+
+            <div class="location-item" data-lat="53.3438" data-lng="-6.2546" data-category="food">
+                <strong>Trinity Dining Hall</strong><br>Historic student dining.
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© The Dublin Blueprint</p>
+    </footer>
+
+    <!-- MAP SCRIPT -->
+<script>
+    // Maps start point 
+    var map = L.map('map').setView([53.3498, -6.2603], 13);
+
+    // Tile layer for MAP
+    L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors & CartoDB'
+    }).addTo(map);
+
+    var markers = [];
+
+    // Create markers from sidebar items
+    document.querySelectorAll('.location-item').forEach((item) => {
+        let lat = item.dataset.lat;
+        let lng = item.dataset.lng;
+        let category = item.dataset.category;
+
+        let marker = L.marker([lat, lng]).addTo(map)
+            .bindPopup(item.querySelector('strong').innerText);
+
+        markers.push({ marker, category, item });
+
+        // Sidebar Clickable
+        item.addEventListener('click', () => {
+            map.setView([lat, lng], 15);
+            marker.openPopup();
+
+            document.querySelectorAll('.location-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+
+        // Marker Clickable
+        marker.on('click', () => {
+            document.querySelectorAll('.location-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
+
+    // FILTERING 
+    document.querySelectorAll('.filter-bar button').forEach(button => {
+        button.addEventListener('click', () => {
+
+            // Update active button
+            document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+
+            let filter = button.dataset.filter;
+
+            markers.forEach(obj => {
+                let { marker, category, item } = obj;
+
+                if (filter === "all" || category === filter) {
+                    map.addLayer(marker);
+                    item.style.display = "block";
+                } else {
+                    map.removeLayer(marker);
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
