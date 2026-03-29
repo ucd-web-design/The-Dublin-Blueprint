@@ -726,4 +726,52 @@ img {
   max-width: 100%;
 }
 
+/* MULTIPLE IMAGES */
+.attraction-images {
+  position: relative;
+}
+
+.attraction-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* second image overlap */
+.attraction-images img.second {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 70%;
+  height: 220px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* reverse adjustment */
+.attraction.reverse .attraction-images img.second {
+  left: auto;
+  right: 40px;
+}
+
+/* spacing fix */
+.card.attraction {
+  padding: 0;
+  overflow: hidden;
+}
+
+.attraction .text {
+  padding: 40px;
+}
+
+.card.burgundy,
+.card.green,
+.card.navy {
+  color: #fdfcf9;
+}
+
+.card.burgundy a,
+.card.green a,
+.card.navy a {
+  color: #fdfcf9;
 }
