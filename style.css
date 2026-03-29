@@ -350,7 +350,7 @@ footer {
 }
 
 /* TEXT */
-.attraction .text h2 {
+.attraction .text .h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
 }
