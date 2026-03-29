@@ -360,8 +360,10 @@ footer {
 .attractions-nav {
   display: flex;
   justify-content: center;
+	align-items: center;
   gap: 40px;
   margin: 20px 0 40px 0;
+	text-align: center;
 }
 
 .attractions-nav a {
