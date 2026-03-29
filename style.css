@@ -316,10 +316,10 @@ footer {
   border-bottom: 1px dashed #fdfcf9;
   border-right: 1px dashed #fdfcf9;
 }
-
-.attraction img {
-  width: 100%;
+.attraction-images {
+  position: relative;
   height: 300px;
+  overflow: hidden;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -727,12 +727,9 @@ img {
 }
 
 /* MULTIPLE IMAGES */
-.attraction-images {
-  position: relative;
-}
 
 .attraction-images img {
-  width: 100%;
+  position: relative;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
@@ -764,14 +761,4 @@ img {
   padding: 40px;
 }
 
-.card.burgundy,
-.card.green,
-.card.navy {
-  color: #fdfcf9;
-}
 
-.card.burgundy a,
-.card.green a,
-.card.navy a {
-  color: #fdfcf9;
-}
