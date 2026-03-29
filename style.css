@@ -741,20 +741,13 @@ img {
 
 }
 
-/* =========================
-   MAP PAGE LAYOUT
-========================= */
+/* MAP PAGE LAYOUT */
 
-/* =========================
-   MAP PAGE WRAPPER
-========================= */
 .map-page {
     padding: 40px 60px;
 }
 
-/* =========================
-   FILTER BAR (TOP)
-========================= */
+/* FILTER BAR (TOP) */
 .filter-bar {
     display: flex;
     gap: 10px;
@@ -782,9 +775,7 @@ img {
     color: white;
 }
 
-/* =========================
-   3-COLUMN MAP LAYOUT
-========================= */
+   /* 3-COLUMN MAP LAYOUT */
 .map-layout {
     display: grid;
     grid-template-columns: 1fr 1.2fr 0.8fr; /* left / map / sidebar */
@@ -792,9 +783,7 @@ img {
     align-items: start;
 }
 
-/* =========================
-   LEFT INFO PANEL
-========================= */
+/* LEFT INFO PANEL */
 .map-info h2 {
     font-family: 'Playfair Display', serif;
     margin-bottom: 15px;
@@ -805,18 +794,14 @@ img {
     margin-bottom: 20px;
 }
 
-/* =========================
-   MAP CONTAINER
-========================= */
+/* MAP CONTAINER */
 #map {
     height: 550px;
     width: 100%;
     border-radius: 10px;
 }
 
-/* =========================
-   SIDEBAR (RIGHT)
-========================= */
+/* SIDEBAR (RIGHT) */
 .sidebar {
     background: white;
     padding: 20px;
@@ -847,9 +832,7 @@ img {
     border-left: 4px solid var(--blue);
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
 
     .map-layout {
