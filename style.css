@@ -415,7 +415,8 @@ footer {
   flex-direction: column;
   gap: 40px;
   padding: 80px 60px;
-  max-width: 700px;
+  max-width: 1000px;
+  margin: 0 auto; /* center whole section */
 }
 
 /* ITEMS */
@@ -426,13 +427,19 @@ footer {
   width: 65%;
 }
 
-/* OFFSET (this creates cascade effect) */
-.about-item:nth-child(2) {
-  margin-left: 625px;
+/* LEFT */
+.about-item:nth-child(1) {
+  align-self: flex-start;
 }
 
+/* CENTRE */
+.about-item:nth-child(2) {
+  align-self: center;
+}
+
+/* RIGHT */
 .about-item:nth-child(3) {
-  margin-left: 1250px;
+  align-self: flex-end;
 }
 
 /* COLOUR ACCENTS */
@@ -670,8 +677,16 @@ footer {
 
   .about-item {
     width: 100%;
-    margin-left: 0 !important;
+	align-self: center;
+	margin: 0 auto;
+	padding: 18px;
+	max-width: 500px;
+	box-sizing: border-box;
   }
+  
+  html, body {
+  overflow-x: hidden;
+}
 
   /* TIMELINE */
   .timeline {
@@ -699,5 +714,9 @@ footer {
     max-width: 100%;
     padding: 0 20px;
   }
+
+img {
+  max-width: 100%;
+}
 
 }
