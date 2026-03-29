@@ -683,6 +683,13 @@ footer {
 	max-width: 500px;
 	box-sizing: border-box;
   }
+
+   .about-image img {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
   
   html, body {
   overflow-x: hidden;
