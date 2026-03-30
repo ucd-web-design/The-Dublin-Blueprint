@@ -1194,10 +1194,3 @@ img {
 }
 
 /*FOOD PAGE*/
-
-
-a:hover {
-  font-weight: 600;       
-  color: var(--blue); 
-  font-size: 10px;
-}
