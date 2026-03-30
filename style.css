@@ -1192,3 +1192,140 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/*FOOD PAGE*/
+/* --- Global Link Styling --- */
+
+a {
+
+    text-decoration: none; /* Removes the default underline */
+
+    color: #2c3e50;        /* A sleek dark blue/grey color */
+
+    transition: color 0.3s ease-in-out;
+
+}
+
+ 
+
+a:hover {
+
+    color: #16a085;        /* Turns teal/green on hover */
+
+}
+
+ 
+
+/* --- Navigation Menu Link Styling --- */
+
+.main-nav ul {
+
+    list-style-type: none;
+
+    padding: 0;
+
+    display: flex;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+
+}
+
+ 
+
+.main-nav a {
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    font-size: 0.9rem;
+
+    color: #333;
+
+}
+
+ 
+
+.main-nav a:hover,
+
+.main-nav a.active {
+
+    color: #16a085;
+
+    border-bottom: 2px solid #16a085; /* Adds a nice underline indicator for the active page */
+
+}
+
+ 
+
+/* --- External Restaurant Link Styling --- */
+
+.external-link {
+
+    color: #2980b9;
+
+    font-weight: bold;
+
+    font-size: 1.5rem;
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+ 
+
+.external-link::after {
+
+    content: " ↗"; /* Adds a small arrow to indicate an external site */
+
+    font-size: 1rem;
+
+    opacity: 0.7;
+
+}
+
+ 
+
+.external-link:hover {
+
+    color: #e74c3c; /* Highlights the restaurant name nicely when hovered */
+
+    text-decoration: underline;
+
+}
+
+ 
+
+/* --- Structural Card Styling for the Food items --- */
+
+.spot-card {
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+}
+
+ 
+
+.spot-card img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 4px;
+
+    margin-top: 15px;
+
+}
