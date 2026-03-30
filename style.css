@@ -1195,12 +1195,8 @@ img {
 
 /*FOOD PAGE*/
 
-a: {
-	text-decoration: underline;
-	font-size: 40px;
-}
+
 a:hover {
-  text-decoration: underline;
   font-weight: 600;       
   color: var(--blue);      
 }
