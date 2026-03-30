@@ -922,16 +922,9 @@ img {
   position: sticky;
   top: 120px;
 	align-self: flex-start;
-	padding-left: 30px;
-}
-.plan-nav::before {
-  content: "";
-  position: fixed;          
-  top: 0;
-  left: 0;
-  width: 6px;              
-  height: 100vh;           
+	padding-left: 30px;         
   background-color: var(--green);
+	border-radius: 10px;
 }
 
 .plan-nav ul {
@@ -947,11 +940,13 @@ img {
   text-decoration: none;
   font-size: 14px;
   color: white;
+	opacity: 0.85;
   transition: 0.2s ease;
 }
 
 .plan-nav a:hover {
   color: white;
+	opacity: 1;
   font-weight: 500;
 }
 
@@ -964,6 +959,7 @@ img {
 /* MAIN CONTENT */
 .plan-content {
   max-width: 800px;
+	mergin-left: 40px;
 }
 
 /* SECTIONS */
@@ -976,7 +972,9 @@ img {
   font-size: 32px;
   margin-bottom: 15px;
 }
-
+.plan-layout {
+  grid-template-columns: 240px 1fr;
+}
 .plan-section p {
   line-height: 1.7;
   margin-bottom: 15px;
