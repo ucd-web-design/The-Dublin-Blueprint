@@ -391,6 +391,10 @@ html {
 .attractions-nav a:hover::after {
   width: 100%;
 }
+.visit a:hover {
+  font-weight: 600;       
+  color: var(--blue);      
+}
 /* HIDDEN GEMS */
 .hidden-gems {
   padding: 80px 60px;
