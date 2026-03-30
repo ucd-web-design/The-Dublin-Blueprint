@@ -920,8 +920,18 @@ img {
 /* SIDE NAV */
 .plan-nav {
   position: sticky;
-  top: 100px;
-  height: fit-content;
+  top: 120px;
+	align-self: flex-start;
+	padding-left: 30px;
+}
+.plan-nav::before {
+  content: "";
+  position: fixed;          
+  top: 0;
+  left: 0;
+  width: 6px;              
+  height: 100vh;           
+  background-color: var(--green);
 }
 
 .plan-nav ul {
@@ -936,12 +946,12 @@ img {
 .plan-nav a {
   text-decoration: none;
   font-size: 14px;
-  color: #6b665f;
+  color: white;
   transition: 0.2s ease;
 }
 
 .plan-nav a:hover {
-  color: var(--blue);
+  color: white;
   font-weight: 500;
 }
 
