@@ -1125,6 +1125,7 @@ img {
 .tips-color-block p {
   max-width: 600px;
   line-height: 1.6;
+ margin: 0 auto;
 }
 
 .tips-color-block-content {
