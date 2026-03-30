@@ -1197,6 +1197,7 @@ img {
 
 a: {
 	text-decoration: underline;
+	font-size: 40px;
 }
 a:hover {
   font-weight: 600;       
