@@ -1194,3 +1194,37 @@ img {
 }
 
 /*FOOD PAGE*/
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--blue);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
