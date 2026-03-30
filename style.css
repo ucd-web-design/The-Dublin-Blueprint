@@ -1198,5 +1198,6 @@ img {
 
 a:hover {
   font-weight: 600;       
-  color: var(--blue);      
+  color: var(--blue); 
+  font-size: 40px;
 }
