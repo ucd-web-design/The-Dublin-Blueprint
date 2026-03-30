@@ -1195,7 +1195,7 @@ img {
 
 /*FOOD PAGE*/
 
-.timeline a:hover {
+a:hover {
   font-weight: 600;       
   color: var(--blue);      
 }
