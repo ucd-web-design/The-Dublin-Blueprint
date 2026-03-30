@@ -400,6 +400,26 @@ html {
   font-family: 'Playfair Display', serif;
   margin-bottom: 30px;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  padding: 10px 14px;
+  font-size: 14px;
+
+  background-color: var(--blue);
+  color: #fdfcf9;
+
+  border-radius: 20px;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
 
 /* ABOUT PAGE */
 .about-section {
