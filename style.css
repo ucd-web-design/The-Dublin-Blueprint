@@ -945,73 +945,114 @@ img {
   }
 
 }
-/*PLAN YOUR STAY PAGE*/
+/* PLAN YOUR STAY PAGE */
 
-/* LAYOUT WRAPPER */
-.plan-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 40px;
-  padding: 60px;
+html, body {
+  height: 100%;
 }
 
-/* SIDE NAV */
+.plan-layout {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  gap: 0;
+  align-items: stretch;
+}
+
 .plan-nav {
-  position: sticky;
-  top: 100px;
-  height: calc(100vh - 100px);
-
   background-color: var(--green);
-
-  padding: 40px 20px;
+  padding: 60px 40px;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
+
+  /* THIS makes it full height */
+  min-height: 100%;
+  margin-bottom: -200px;
+}
+
+/* THIS is the sticky part */
+.plan-nav-inner {
+  position: sticky;
+  top: 80px; /* below navbar */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .plan-nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .plan-nav li {
-  margin-bottom: 15px;
+  text-align: center;
+}
+
+.plan-nav li {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 10px;
 }
 
 .plan-nav a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
-	opacity: 0.85;
+
+  display: inline-block;
+  padding: 10px 0;
+
+  opacity: 0.85;
   transition: 0.2s ease;
 }
 
 .plan-nav a:hover {
-  color: white;
-	opacity: 1;
-  font-weight: 500;
+  opacity: 1;
+  transform: translateX(3px);
 }
 
-/* ACTIVE LINK */
 .plan-nav a.active {
   color: var(--blue);
   font-weight: 600;
 }
 
-/* MAIN CONTENT */
-.plan-content {
-  max-width: 800px;
-	mergin-left: 40px;
-}
-
-/* SECTIONS */
-.plan-section {
-  margin-bottom: 80px;
+.plan-main {
+  padding: 60px 80px 80px 80px;
+  box-sizing: border-box;
 }
 
 .plan-page-header {
-  margin-left: 240px; 
-  padding-right: 60px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.plan-page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.plan-page-header p {
+  margin: 0 auto;
+  max-width: 600px;
+  color: #6b665f;
+  line-height: 1.6;
+}
+
+.plan-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.plan-section {
+  margin-bottom: 80px;
 }
 
 .plan-section h2 {
@@ -1019,13 +1060,7 @@ img {
   font-size: 32px;
   margin-bottom: 15px;
 }
-.plan-layout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 40px;
-  padding: 60px;
-  align-items: start;
-}
+
 .plan-section p {
   line-height: 1.7;
   margin-bottom: 15px;
@@ -1080,6 +1115,114 @@ img {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+
+  /* RESET EVERYTHING FIRST */
+  .plan-layout {
+    display: block;
+  }
+
+  .plan-nav {
+    position: relative !important;
+    top: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 20px;
+  }
+
+  .plan-nav-inner {
+    position: static !important;
+  }
+
+  /* TURN SIDEBAR INTO TOP NAV */
+  .plan-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .plan-nav li {
+    border: none;
+    padding: 0;
+  }
+
+  .plan-nav a {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  /* FIX HEADER (THIS IS THE MAIN ISSUE) */
+  .plan-main {
+    padding: 20px;
+  }
+
+  .plan-page-header {
+    margin-top: 20px; /* pushes it below nav */
+    margin-bottom: 30px;
+  }
+
+  .plan-page-header h1 {
+    font-size: 32px;
+  }
+  
+  .plan-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;   /* slightly smaller than 48px title */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.plan-section {
+  max-width: 700px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+  .plan-page-header p {
+    font-size: 15px;
+  }
+
+  /* IMAGES STACK */
+  .plan-images {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-image-large img {
+    height: auto;
+  }
+  
+  .plan-content {
+  max-width: 700px;   /* smaller = more centered feel */
+  margin: 0 auto;
+  text-align: center; /* centers all text */
+}
+
+.plan-images img,
+.plan-image-large img {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.plan-image-large {
+  display: flex;
+  justify-content: center;
+}
+
+.plan-image-large img {
+  width: 100%;
+  max-width: 500px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+}
 /* TIPS BOX */
 .tips-box {
   background: white;
