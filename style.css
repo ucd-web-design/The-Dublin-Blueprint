@@ -1194,94 +1194,162 @@ img {
 }
 
 /*FOOD PAGE*/
-/* --- Global Link Styling --- */
+/* --- Attractions-Style Grid Layout --- */
 
-a {
-    text-decoration: none; /* Removes the default underline */
-    color: #2c3e50;        /* A sleek dark blue/grey color */
-    transition: color 0.3s ease-in-out;
+.attractions-grid {
+
+    display: grid;
+
+    /* Automatically creates responsive columns based on screen size */
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+
 }
 
  
 
-a:hover {
-    color: #16a085;        /* Turns teal/green on hover */
-}
+/* --- The Cards --- */
 
- 
+.attraction-card {
 
-/* --- Navigation Menu Link Styling --- */
+    background: #ffffff;
 
-.main-nav ul {
-    list-style-type: none;
-    padding: 0;
+    border-radius: 12px;
+
+    overflow: hidden; /* Keeps the images inside the rounded corners */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+
+    flex-direction: column;
+
 }
 
  
 
-.main-nav a {
-    font-weight: 600;
+.attraction-card:hover {
+
+    transform: translateY(-5px); /* Creates a slight lift effect when hovered */
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+ 
+
+/* --- Uniform Images --- */
+
+.image-wrapper {
+
+    width: 100%;
+
+    height: 220px; /* Forces all images to be the same height */
+
+    overflow: hidden;
+
+}
+
+ 
+
+.image-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover; /* Prevents stretching; crops images nicely instead */
+
+    transition: transform 0.5s ease;
+
+}
+
+ 
+
+.attraction-card:hover .image-wrapper img {
+
+    transform: scale(1.05); /* Slight zoom on the image when hovering over the card */
+
+}
+
+ 
+
+/* --- Card Text Area --- */
+
+.card-info {
+
+    padding: 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1; /* Pushes content down neatly */
+
+}
+
+ 
+
+.category-tag {
+
+    font-size: 0.8rem;
+
     text-transform: uppercase;
-    font-size: 0.9rem;
-    color: #333;
+
+    letter-spacing: 1px;
+
+    color: #e67e22;
+
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
+
 }
 
  
 
-.main-nav a:hover,
+.card-info h3 {
 
-.main-nav a.active {
-    color: #16a085;
-    border-bottom: 2px solid #16a085; /* Adds a nice underline indicator for the active page */
+    margin: 0 0 0.5rem 0;
+
+    font-size: 1.4rem;
+
 }
 
  
 
-/* --- External Restaurant Link Styling --- */
+.card-info h3 a {
 
-.external-link {
+    color: #2c3e50;
+
+    text-decoration: none;
+
+}
+
+ 
+
+.card-info h3 a:hover {
+
     color: #2980b9;
-    font-weight: bold;
-    font-size: 1.5rem;
-    position: relative;
-    display: inline-block;
+
 }
 
  
 
-.external-link::after {
-    content: " ↗"; /* Adds a small arrow to indicate an external site */
-    font-size: 1rem;
-    opacity: 0.7;
-}
+.card-info p {
 
- 
+    color: #555;
 
-.external-link:hover {
-    color: #e74c3c; /* Highlights the restaurant name nicely when hovered */
-    text-decoration: underline;
-}
+    font-size: 0.95rem;
 
- 
+    line-height: 1.5;
 
-/* --- Structural Card Styling for the Food items --- */
+    margin: 0;
 
-.spot-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
- 
-
-.spot-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 15px;
 }
