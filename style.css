@@ -1228,3 +1228,20 @@ img {
   width: 100%;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the cards */
+  justify-content: center;
+}
+
+
+/* =========================
+   FOOD PAGE
+========================= */
+.grid .card {
+  flex: 1;
+  min-width: 300px; /* Adjust based on your design */
+  max-width: 45%; /* Ensures only two fit side-by-side */
+  box-sizing: border-box;
+}
