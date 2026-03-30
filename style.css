@@ -451,6 +451,7 @@ html {
 .about-hero p {
   max-width: 600px;
   line-height: 1.6;
+  margin: 0 auto;
 }
 
 .about-hero-content {
