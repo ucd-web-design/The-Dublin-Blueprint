@@ -120,7 +120,6 @@ body::before {
   color: #fdfcf9;
 }
 
-/* SPLIT INTRO FULL HEIGHT */
 .intro-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -138,7 +137,7 @@ body::before {
   max-width: 500px; 
 }
 
-/* RIGHT BLOCK (FULL HEIGHT) */
+/* RIGHT BLOCK */
 .intro-visual {
   background-color: var(--burgundy);
   position: relative;
@@ -375,7 +374,7 @@ footer {
   color: var(--blue);
 }
 
-/* underline hover (matches navbar style) */
+/* underline hover */
 .attractions-nav a::after {
   content: "";
   position: absolute;
@@ -398,14 +397,14 @@ html {
   font-weight: 600;
 }
 
-/* Override ONLY Viator (more specific selector) */
+/* Override Viator */
 .attraction .text p a.viator-link {
   font-weight: normal;
   text-decoration: underline;
   font-size: inherit;
 }
 
-/* Hover (applies to all, including Viator) */
+/* Hover */
 .attraction .text p a:hover {
   font-weight: 600;
   color: var(--blue);
@@ -554,9 +553,7 @@ html {
   font-family: 'Playfair Display', serif;
 }
 
-/* =========================
-   ITINERARY PAGE
-========================= */
+/* ITINERARY PAGE */
 
 /* HERO */
 .itinerary-hero {
@@ -694,9 +691,7 @@ html {
   color: var(--blue);      
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -729,7 +724,7 @@ html {
     font-size: 32px;
   }
 
-  /* INTRO SPLIT → STACK */
+  /* INTRO SPLIT */
   .intro-split {
     grid-template-columns: 1fr;
   }
@@ -883,7 +878,7 @@ img {
     border-radius: 10px;
 }
 
-/* SIDEBAR (RIGHT) */
+/* SIDEBAR */
 .sidebar {
     background: var(--green);
 	color: #fdfcf9;
@@ -971,7 +966,6 @@ html, body {
   margin-bottom: -200px;
 }
 
-/* THIS is the sticky part */
 .plan-nav-inner {
   position: sticky;
   top: 80px; /* below navbar */
@@ -1117,7 +1111,6 @@ html, body {
 
 @media (max-width: 768px) {
 
-  /* RESET EVERYTHING FIRST */
   .plan-layout {
     display: block;
   }
@@ -1135,7 +1128,6 @@ html, body {
     position: static !important;
   }
 
-  /* TURN SIDEBAR INTO TOP NAV */
   .plan-nav ul {
     display: flex;
     flex-direction: row;
@@ -1156,7 +1148,6 @@ html, body {
     font-size: 14px;
   }
 
-  /* FIX HEADER (THIS IS THE MAIN ISSUE) */
   .plan-main {
     padding: 20px;
   }
@@ -1315,7 +1306,6 @@ html, body {
   border-right: 1px dashed #fdfcf9;
 }
 
-
 /* DO & DON'T GRID */
 .do-dont-grid {
     display: grid;
@@ -1347,11 +1337,9 @@ html, body {
     }
 }
 
-/* =========================
-   FOOD PAGE — CLEAN VERSION
-========================= */
+/* FOOD PAGE */
 
-/* SECTION WRAPPER (like attractions) */
+/* SECTION WRAPPER */
 .fine-dining-list .attraction,
 .casual-eats-list .attraction,
 .bars-and-pubs-list .attraction,
@@ -1390,7 +1378,6 @@ html, body {
 
 }
 
-/* CENTER LAST ITEM WITHOUT SHRINKING */
 .grid .card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   justify-self: center;
@@ -1402,7 +1389,7 @@ html, body {
   transform: translateY(-4px);
 }
 
-/* TITLE (IMPORTANT FIX) */
+/* TITLE */
 .grid .card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
@@ -1429,8 +1416,6 @@ html, body {
   line-height: 1.6;
 }
 
-
-/* IMAGE FIX (CRITICAL) */
 .grid img {
   width: 100%;
   height: 180px;
@@ -1441,13 +1426,11 @@ html, body {
   float: none;
 }
 
-/* REMOVE GLOBAL FLOAT EFFECT */
 .grid img,
 .grid .card {
   float: none;
 }
 
-/* FULL FOOD BACKGROUND BLOCK */
 .fine-dining-list,
 .casual-eats-list,
 .bars-and-pubs-list,
@@ -1457,7 +1440,6 @@ html, body {
 }
 
 /* background layer */
-/* FOOD PAGE GLOBAL BACKGROUND */
 .food-page {
   position: relative;
 }
@@ -1473,7 +1455,6 @@ html, body {
   z-index: 0;
 }
 
-/* keep everything above */
 .food-page > * {
   position: relative;
   z-index: 1;
@@ -1483,7 +1464,7 @@ html, body {
   content: "";
   position: absolute;
 
-  top: 240px;   /* SAME as burgundy start */
+  top: 240px;   
   left: 40px;
 
   width: 60px;
@@ -1499,8 +1480,6 @@ html, body {
   z-index: 999999;
 }
 
-
-/* keep content above */
 .fine-dining-list .container,
 .casual-eats-list .container,
 .bars-and-pubs-list .container,
@@ -1510,10 +1489,7 @@ html, body {
   z-index: 1;
 }
 
-
-/* =========================
-   FOOD PAGE — MOBILE FIX
-========================= */
+/* FOOD PAGE — MOBILE FIX */
 
 @media (max-width: 768px) {
 
